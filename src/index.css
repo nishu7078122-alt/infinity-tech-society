@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-bg: #050807;
+    --brand-charcoal: #0C1210;
+    --brand-surface: #0F1714;
+    --brand-lime: #B6FF39;
+    --brand-green: #77C83D;
+    --brand-text: #F5F7F4;
+    --brand-muted: #A6ADA7;
+  }
+
+  body {
+    background-color: var(--brand-bg);
+    color: var(--brand-text);
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050807;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #192722;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B6FF39;
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(12, 18, 16, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-lime {
+  background: rgba(12, 18, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(182, 255, 57, 0.28);
+  box-shadow: 0 0 25px rgba(182, 255, 57, 0.12);
+}
+
+.glass-nav {
+  background: rgba(5, 8, 7, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Glow effects */
+.glow-lime-sm {
+  filter: drop-shadow(0 0 8px rgba(182, 255, 57, 0.6));
+}
+
+.glow-lime-lg {
+  filter: drop-shadow(0 0 20px rgba(182, 255, 57, 0.8));
+}
+
+.text-gradient-lime {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E0FF99 60%, #B6FF39 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle grid line background */
+.bg-tech-grid {
+  background-image: linear-gradient(to right, rgba(182, 255, 57, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(182, 255, 57, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(182, 255, 57, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
